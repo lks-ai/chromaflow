@@ -1,6 +1,7 @@
 # ChromaFlow
 
 ComfyUI ChromaFlow creates smoothly Animated Masks with synchronized Depth Maps from an input image. It introduces the concept of a "motion guidance" image, and is great for doing complex motion with interacting elements for AnimateDiff and IPAdapter workflows.
+![chromaflow_00358](https://github.com/lks-ai/chromaflow/assets/163685473/891e0185-f961-4303-824e-aaf739ba03fa)
 
 ChromaFlow is currently in Beta and we are definitely still working out some issues we already know of which will be listed below.  There is still a lot of exploration to be done because it is essentially pulling the spatio-temporal AnimateDiff model's space around forcing it to comply to very abstract movement, and generate according to the mask.
 
