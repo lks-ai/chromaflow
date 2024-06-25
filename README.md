@@ -15,6 +15,8 @@ ChromaFlow uses the idea of partitioning to cluster the pixels from the motion g
 
 ### Motion Guidance Images
 This is not necessarily a new concept, but it is somewhat untouched territory in ComfyUI. You can think of the motion guidance image as a gradient which defines the direction of motion at every point in the image. If high strenghts are used for ControlNet and IPAdapter, it will force the output animation to have the static structure of the motion guidance image while everything within those boundaries moves and interacts.
+#### Example of using a picture as motion guidance
+![image (152)](https://github.com/lks-ai/chromaflow/assets/163685473/e6d2b7d7-f35c-4852-ac28-abb3d732f459) ![chromaflow_00352](https://github.com/lks-ai/chromaflow/assets/163685473/b18cb700-5202-4e84-8d4b-33351ccde535)
 
 ## Features
 - Generates ControlNet Depth Map, and a positive and negative Attention Mask for IPAdapter
