@@ -12,6 +12,7 @@ ChromaFlow is currently in Beta and we are definitely still working out some iss
 
 ## How it works
 ChromaFlow uses the idea of partitioning to cluster the pixels from the motion guidance image into RGB space. It then walks through the clustered RGB space using the cluster centers as waypoints. On each step of the walk, it does a search for some number of "nearest neighbor pixels" being nearest in RGB color to the current point in the walk.
+![image](https://github.com/lks-ai/chromaflow/assets/163685473/32c115dd-67cb-4c25-9558-6103a231474b)
 
 ### Motion Guidance Images
 This is not necessarily a new concept, but it is somewhat untouched territory in ComfyUI. You can think of the motion guidance image as a gradient which defines the direction of motion at every point in the image. If high strenghts are used for ControlNet and IPAdapter, it will force the output animation to have the static structure of the motion guidance image while everything within those boundaries moves and interacts.
