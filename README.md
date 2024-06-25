@@ -6,7 +6,7 @@ ComfyUI ChromaFlow creates smoothly Animated Masks with synchronized Depth Maps 
 ChromaFlow is currently in Beta and we are definitely still working out some issues we already know of which will be listed below.  There is still a lot of exploration to be done because it is essentially pulling the spatio-temporal AnimateDiff model's space around forcing it to comply to very abstract movement, and generate according to the mask.
 
 ## Installation
-1. Clone this repository
+1. Clone this repository into your `ComfyUI/custom_nodes` folder
 2. `cd` to the folder
 3. `pip install -r requirements.txt`
 4. Restart ComfyUI and Refresh the UI in your browser
