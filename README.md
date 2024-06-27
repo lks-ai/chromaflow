@@ -15,6 +15,12 @@ ChromaFlow is currently in Beta and we are definitely still working out some iss
 ChromaFlow uses the idea of partitioning to cluster the pixels from the motion guidance image into RGB space. It then walks through the clustered RGB space using the cluster centers as waypoints. On each step of the walk, it does a search for some number of "nearest neighbor pixels" being nearest in RGB color to the current point in the walk.
 ![image](https://github.com/lks-ai/chromaflow/assets/163685473/32c115dd-67cb-4c25-9558-6103a231474b)
 
+## Where does ChromaFlow fit in your Workflow?
+ChromaFlow should get an image as an input, and it will output three animations:
+1. A DepthMap animation (functions like a depth map preprocessor) which can be fed into an `Apply ControlNet` node
+2. A "binary" Attention Mask animation which can be fed to an `IPAdapter` or `IPAdapter Advanced`
+3. The Inverted Mask animation (in case you want the negative space to have the style from IPAdapter instead)
+
 ### Motion Guidance Images
 This is not necessarily a new concept, but it is somewhat untouched territory in ComfyUI. You can think of the motion guidance image as a gradient which defines the direction of motion at every point in the image. If high strenghts are used for ControlNet and IPAdapter, it will force the output animation to have the static structure of the motion guidance image while everything within those boundaries moves and interacts.
 #### Example of using a picture as motion guidance
@@ -25,6 +31,9 @@ This is not necessarily a new concept, but it is somewhat untouched territory in
 - Beat Matching (Use `BPM Config` node to match a tempo at any frame rate)
 - Lorentz Walk (Walks through the space using the famous Lorentz Attractor)
 - Fully adjustable masks (Change your walk to get a different animation)
+
+## Something I Made with ChromaFlow and Udio
+[![image](https://github.com/lks-ai/chromaflow/assets/163685473/2aac2f50-4532-4a05-9d3b-3ab8a369bd2e)](https://www.youtube.com/watch?v=rSP7cse7r00)
 
 ## Roadmap
 - Fixing up the walk looping on certiain walks
